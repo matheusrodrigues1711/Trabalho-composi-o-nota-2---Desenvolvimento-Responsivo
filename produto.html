@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto — Danilo's Wear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <!--NavBar-->
+    <nav class="navbar navbar-expand-lg sticky-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="brand-icon">
+                    <img class="img-fluid logo" src="Imagens/Logo.png" alt="Logo">
+                </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Abrir Menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="produto.html">Produto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="nav-link cart-link" href="contato.html" aria-label="Carrinho">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                            </svg>
+                            <span class="cart-badge"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- Seletor de produto (simulação) -->
+        <section class="product-switcher py-3" aria-label="Selecionar produto">
+            <div class="container">
+                <div class="d-flex gap-2 flex-wrap align-items-center">
+                    <span class="category-label">Visualizar:</span>
+                    <button class="btn btn-cat active" data-product="camiseta">Camiseta Classic</button>
+                    <button class="btn btn-cat" data-product="caneca">Caneca Premium</button>
+                    <button class="btn btn-cat" data-product="capinha">Capinha de Celular</button>
+                    <button class="btn btn-cat" data-product="chaveiro">Chaveiro Metal Gold</button>
+                    <button class="btn btn-cat" data-product="funko">Funko Pop Exclusivo</button>
+                    <button class="btn btn-cat" data-product="garrafa">Garrafa Térmica</button>
+                    <button class="btn btn-cat" data-product="pelucia">Pelúcia Exclusiva</button>
+                    <button class="btn btn-cat" data-product="poster">Poster Artístico</button>
+                    <button class="btn btn-cat" data-product="ursinho">Ursinho de Pelúcia</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="breadcrumb-section">
+            <div class="container">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Início</a></li>
+                    <li class="breadcrumb-item"><a href="index.html">Catálogo</a></li>
+                    <li class="breadcrumb-item active" aria-current="page" id="breadcrumb-name">Camiseta Classic</li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- Detalhes do Produto -->
+        <section class="product-detail-section py-5" aria-label="Detalhes do produto">
+            <div class="container">
+                <div class="row g-5">
+
+                    <!-- Coluna Imagem -->
+                    <div class="col-lg-6">
+                        <div class="product-detail-img-wrapper">
+                            <img id="detail-img" src="Imagens/camiseta.jpeg" alt="Camiseta Classic preta com estampa dourada" class="product-detail-img" />
+                        </div>
+                        <!-- Miniaturas -->
+                        <div class="d-flex gap-2 mt-3" id="thumbnails">
+                            <button class="thumb-btn active" aria-label="Vista 1">
+                                <img src="Imagens/camiseta.jpeg" alt="Vista frontal" />
+                            </button>
+                            <button class="thumb-btn" aria-label="Vista 2">
+                                <img src="Imagens/camiseta.jpeg" alt="Vista traseira" />
+                            </button>
+                            <button class="thumb-btn" aria-label="Vista 3">
+                                <img src="Imagens/camiseta.jpeg" alt="Detalhe da estampa" />
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Coluna Texto / Ação -->
+                    <div class="col-lg-6">
+                        <span class="product-tag mb-2 d-inline-block" id="detail-tag">Camisetas</span>
+                        <h1 class="product-detail-title" id="detail-name">Camiseta Classic</h1>
+                        <p class="product-detail-price" id="detail-price">R$ 59,90</p>
+                        <p class="product-detail-desc" id="detail-desc">
+                            Camiseta exclusiva da coleção Danilo's Wear, confeccionada em algodão 100% premium com acabamento de alta qualidade. Design único e confortável para o dia a dia.
+                        </p>
+
+                        <!-- Seletor de tamanho (visível só para camiseta) -->
+                        <div class="size-selector mb-4" id="size-selector">
+                            <p class="size-label">Tamanho</p>
+                            <div class="d-flex gap-2 flex-wrap">
+                                <button class="btn btn-size" aria-label="Tamanho P">P</button>
+                                <button class="btn btn-size active" aria-label="Tamanho M">M</button>
+                                <button class="btn btn-size" aria-label="Tamanho G">G</button>
+                                <button class="btn btn-size" aria-label="Tamanho GG">GG</button>
+                                <button class="btn btn-size" aria-label="Tamanho GGG">GGG</button>
+                            </div>
+                        </div>
+
+                        <!-- Especificações -->
+                        <div class="specs-table mb-4">
+                            <p class="specs-title">Especificações</p>
+                            <table class="table table-dark table-bordered specs" id="detail-specs">
+                                <tbody>
+                                    <tr><th scope="row">Material</th><td>100% Algodão</td></tr>
+                                    <tr><th scope="row">Peso</th><td>180 g/m²</td></tr>
+                                    <tr><th scope="row">Tamanhos</th><td>P, M, G, GG, GGG</td></tr>
+                                    <tr><th scope="row">Lavagem</th><td>Máquina até 30°C</td></tr>
+                                    <tr><th scope="row">Origem</th><td>Nacional</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Botões de ação -->
+                        <div class="d-flex gap-3 flex-wrap">
+                            <a href="contato.html" class="btn btn-gold flex-grow-1">Adicionar ao carrinho</a>
+                            <a href="contato.html" class="btn btn-outline-gold flex-grow-1">Comprar agora</a>
+                        </div>
+
+                        <!-- Frete -->
+                        <p class="frete-info mt-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                                <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456z"/>
+                            </svg>
+                            Frete grátis para compras acima de R$ 150,00
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Produtos Relacionados -->
+        <section class="related-section py-5" aria-label="Produtos relacionados">
+            <div class="container">
+                <h2 class="section-title mb-4">Você também pode gostar</h2>
+                <div class="row g-4">
+
+                    <article class="col-12 col-sm-6 col-lg-4 product-item">
+                        <div class="product-card">
+                            <a href="produto.html?produto=caneca" class="product-img-link" aria-label="Ver Caneca Premium">
+                                <div class="product-img-wrapper">
+                                    <img src="Imagens/caneca.jpeg" alt="Caneca Premium de porcelana 325ml" class="product-img" />
+                                    <div class="product-overlay"><span>Ver detalhes</span></div>
+                                </div>
+                            </a>
+                            <div class="product-body">
+                                <span class="product-tag">Canecas</span>
+                                <h3 class="product-name"><a href="produto.html?produto=caneca">Caneca Premium</a></h3>
+                                <p class="product-desc">Porcelana · 325 ml · Apta para microondas</p>
+                                <div class="product-footer">
+                                    <span class="product-price">R$ 39,90</span>
+                                    <a href="produto.html?produto=caneca" class="btn btn-gold-sm">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="col-12 col-sm-6 col-lg-4 product-item">
+                        <div class="product-card">
+                            <a href="produto.html?produto=chaveiro" class="product-img-link" aria-label="Ver Chaveiro Metal Gold">
+                                <div class="product-img-wrapper">
+                                    <img src="Imagens/chaveiro.jpeg" alt="Chaveiro Metal Gold em aço inox dourado" class="product-img" />
+                                    <div class="product-overlay"><span>Ver detalhes</span></div>
+                                </div>
+                            </a>
+                            <div class="product-body">
+                                <span class="product-tag">Chaveiros</span>
+                                <h3 class="product-name"><a href="produto.html?produto=chaveiro">Chaveiro Metal Gold</a></h3>
+                                <p class="product-desc">Aço inox · Acabamento dourado</p>
+                                <div class="product-footer">
+                                    <span class="product-price">R$ 19,90</span>
+                                    <a href="produto.html?produto=chaveiro" class="btn btn-gold-sm">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="col-12 col-sm-6 col-lg-4 product-item">
+                        <div class="product-card featured">
+                            <div class="badge-featured">Mais vendido</div>
+                            <a href="produto.html?produto=funko" class="product-img-link" aria-label="Ver Funko Pop Exclusivo">
+                                <div class="product-img-wrapper">
+                                    <img src="Imagens/funko.jpeg" alt="Funko Pop edição exclusiva" class="product-img" />
+                                    <div class="product-overlay"><span>Ver detalhes</span></div>
+                                </div>
+                            </a>
+                            <div class="product-body">
+                                <span class="product-tag">Colecionáveis</span>
+                                <h3 class="product-name"><a href="produto.html?produto=funko">Funko Pop Exclusivo</a></h3>
+                                <p class="product-desc">Edição limitada · Caixa colecionável</p>
+                                <div class="product-footer">
+                                    <span class="product-price">R$ 89,90</span>
+                                    <a href="produto.html?produto=funko" class="btn btn-gold-sm">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="row g-4 py-5">
+                <div class="col-md-4">
+                    <p class="footer-brand">✦ Danilo's Wear</p>
+                    <p class="footer-desc">Souvenirs exclusivos para momentos inesquecíveis. Feitos com qualidade e carinho.</p>
+                </div>
+                <div class="col-md-4">
+                    <p class="footer-heading">Navegação</p>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Catálogo</a></li>
+                        <li><a href="produto.html">Produto</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <p class="footer-heading">Atendimento</p>
+                    <ul class="footer-links">
+                        <li>contato@daniloswear.com</li>
+                        <li>(41) 9 9999-0000</li>
+                        <li>Seg–Sex, 9h às 18h</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Danilo's Wear. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JS/produto.js"></script>
+</body>
+</html>

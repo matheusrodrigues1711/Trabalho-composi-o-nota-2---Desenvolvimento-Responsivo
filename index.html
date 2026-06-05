@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <!--NavBar-->
+    <nav class="navbar navbar-expand-lg sticky-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="brand-icon">
+                    <img class="img-fluid logo" src="Imagens/Logo.png" alt="Logo">
+                </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Abrir Menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produto.html">Produto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="nav-link cart-link" href="contato.html" aria-label="Carrinho">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                            </svg>
+                            <span class="cart-badge"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <!--Hero-->
+        <section class="hero-section" aria-label="Banner principal">
+            <div class="container">
+                <div class="row align-items-center min-vh-50">
+                    <div class="col-lg-7">
+                        <p class="hero-eyebrow">Coleção exclusiva</p>
+                        <h1 class="hero-title">Souvenirs que <br><span class="text-gold">contam histórias</span></h1>
+                        <p class="hero-subtitle">Camisetas, canecas e chaveiros com designs únicos para quem ama nosso menino Danilo.</p>
+                        <div class="d-flex gap-3 flex-wrap">
+                            <a href="#catalogo" class="btn btn-gold">Ver coleção</a>
+                            <a href="contato.html" class="btn btn-outline-gold">Fale Conosco</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 d-none d-lg-flex justify-content-end">
+                        <div class="hero-badge-group">
+                            <div class="hero-badge">+200 produtos</div>
+                            <div class="hero-badge-sm">Frete grátis acima de R$ 150,00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Categorias Rápidas-->
+        <section class="categories-bar py-4" aria-label="Filtro por categoria">
+            <div class="container">
+                <div class="d-flex gap-2 flex-wrap align-items-center">
+                    <span class="category-label">Filtrar:</span>
+                    <button class="btn btn-cat active" data-filter="all">Todos</button>
+                    <button class="btn btn-cat" data-filter="camisetas">Camisetas</button>
+                    <button class="btn btn-cat" data-filter="canecas">Canecas</button>
+                    <button class="btn btn-cat" data-filter="chaveiros">Chaveiros</button>
+                    <button class="btn btn-cat" data-filter="acessorios">Acessórios</button>
+                    <button class="btn btn-cat" data-filter="colecionaveis">Colecionáveis</button>
+                </div>
+            </div>
+        </section>
+
+        <!--Catálogo-->
+        <section class="catalog-section py-5" id="catalogo" aria-label="Catálogo de produtos">
+            <div class="container">
+
+                <!--Catálogo + Busca-->
+                <div class="row align-items-center mb-4 g-3">
+                    <div class="col-md-6">
+                        <h2 class="section-title mb-0">Nossa coleção</h2>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex gap-2">
+                            <div class="input-group search-group">
+                                <span class="input-group-text search-icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.099zm-5.242 1.656a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z"/>
+                                    </svg>
+                                </span>
+                                <input type="search" class="form-control search-input" placeholder="Buscar produto..." aria-label="Buscar produto" />
+                            </div>
+                            <select class="form-select select-dark" style="max-width:160px" aria-label="Ordenar por">
+                                <option>Mais recentes</option>
+                                <option>Menor preço</option>
+                                <option>Maior preço</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grid de produtos -->
+                <div class="row g-4" id="products-grid">
+
+                    <!-- Camiseta -->
+                    <article class="col-12 col-sm-6 col-lg-4 product-item" data-category="camisetas">
+                        <div class="product-card">
+                            <a href="produto.html?produto=camiseta" class="product-img-link" aria-label="Ver Camiseta Classic">
+                                <div class="product-img-wrapper">
+                                    <img src="Imagens/camiseta.jpeg" alt="Camiseta Classic preta com estampa dourada" class="product-img" />
+                                    <div class="product-overlay"><span>Ver detalhes</span></div>
+                                </div>
+                            </a>
+                            <div class="product-body">
+                                <span class="product-tag">Camisetas</span>
+                                <h3 class="product-name"><a href="produto.html?produto=camiseta">Camiseta Classic</a></h3>
+                                <p class="product-desc">100% algodão · Tamanhos P ao GG</p>
+                                <div class="product-footer">
+                                    <span class="product-price">R$ 59,90</span>
+                                    <a href="produto.html?produto=camiseta" class="btn btn-gold-sm">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Caneca -->
+                    <article class="col-12 col-sm-6 col-lg-4 product-item" data-category="canecas">
+                        <div class="product-card">
+                            <a href="produto.html?produto=caneca" class="product-img-link" aria-label="Ver Caneca Premium">
+                                <div class="product-img-wrapper">
+                                    <img src="Imagens/caneca.jpeg" alt="Caneca Premium de porcelana 325ml" class="product-img" />
+                                    <div class="product-overlay"><span>Ver detalhes</span></div>
+                                </div>
+                            </a>
+                            <div class="product-body">
+                                <span class="product-tag">Canecas</span>
+                                <h3 class="product-name"><a href="produto.html?produto=caneca">Caneca Premium</a></h3>
+                                <p class="product-desc">Porcelana · 325 ml · Apta para microondas</p>
+                                <div class="product-footer">
+                                    <span class="product-price">R$ 39,90</span>
+                                    <a href="produto.html?produto=caneca" class="btn btn-gold-sm">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Capinha -->
+                    <article class="col-12 col-sm-6 col-lg-4 product-item" data-category="acessorios">
+                        <div class="product-card">
+                            <a href="produto.html?produto=capinha" class="product-img-link" aria-label="Ver Capinha de Celular">
+                                <div class="product-img-wrapper">
+                                    <img src="Imagens/capinha.jpeg" alt="Capinha de celular personalizada" class="product-img" />
+                                    <div class="product-overlay"><span>Ver detalhes</span></div>
+                                </div>
+                            </a>
+                            <div class="product-body">
+                                <span class="product-tag">Acessórios</span>
+                                <h3 class="product-name"><a href="produto.html?produto=capinha">Capinha de Celular</a></h3>
+                                <p class="product-desc">Silicone · Vários modelos disponíveis</p>
+                                <div class="product-footer">
+                                    <span class="product-price">R$ 34,90</span>
+                                    <a href="produto.html?produto=capinha" class="btn btn-gold-sm">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Chaveiro -->
+                    <article class="col-12 col-sm-6 col-lg-4 product-item" data-category="chaveiros">
+                        <div class="product-card">
+                            <a href="produto.html?produto=chaveiro" class="product-img-link" aria-label="Ver Chaveiro Metal Gold">
+                                <div class="product-img-wrapper">
+                                    <img src="Imagens/chaveiro.jpeg" alt="Chaveiro Metal Gold em aço inox dourado" class="product-img" />
+                                    <div class="product-overlay"><span>Ver detalhes</span></div>
+                                </div>
+                            </a>
+                            <div class="product-body">
+                                <span class="product-tag">Chaveiros</span>
+                                <h3 class="product-name"><a href="produto.html?produto=chaveiro">Chaveiro Metal Gold</a></h3>
+                                <p class="product-desc">Aço inox · Acabamento dourado</p>
+                                <div class="product-footer">
+                                    <span class="product-price">R$ 19,90</span>
+                                    <a href="produto.html?produto=chaveiro" class="btn btn-gold-sm">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Funko Pop -->
+                    <article class="col-12 col-sm-6 col-lg-4 product-item" data-category="colecionaveis">
+                        <div class="product-card featured">
+                            <div class="badge-featured">Mais vendido</div>
+                            <a href="produto.html?produto=funko" class="product-img-link" aria-label="Ver Funko Pop Exclusivo">
+                                <div class="product-img-wrapper">
+                                    <img src="Imagens/funko.jpeg" alt="Funko Pop edição exclusiva" class="product-img" />
+                                    <div class="product-overlay"><span>Ver detalhes</span></div>
+                                </div>
+                            </a>
+                            <div class="product-body">
+                                <span class="product-tag">Colecionáveis</span>
+                                <h3 class="product-name"><a href="produto.html?produto=funko">Funko Pop Exclusivo</a></h3>
+                                <p class="product-desc">Edição limitada · Caixa colecionável</p>
+                                <div class="product-footer">
+                                    <span class="product-price">R$ 89,90</span>
+                                    <a href="produto.html?produto=funko" class="btn btn-gold-sm">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Garrafa -->
+                    <article class="col-12 col-sm-6 col-lg-4 product-item" data-category="canecas">
+                        <div class="product-card">
+                            <a href="produto.html?produto=garrafa" class="product-img-link" aria-label="Ver Garrafa Térmica">
+                                <div class="product-img-wrapper">
+                                    <img src="Imagens/garrafa.jpeg" alt="Garrafa térmica inox 500ml" class="product-img" />
+                                    <div class="product-overlay"><span>Ver detalhes</span></div>
+                                </div>
+                            </a>
+                            <div class="product-body">
+                                <span class="product-tag">Canecas</span>
+                                <h3 class="product-name"><a href="produto.html?produto=garrafa">Garrafa Térmica</a></h3>
+                                <p class="product-desc">Inox · 500 ml · Mantém temp. por 12h</p>
+                                <div class="product-footer">
+                                    <span class="product-price">R$ 64,90</span>
+                                    <a href="produto.html?produto=garrafa" class="btn btn-gold-sm">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Pelúcia -->
+                    <article class="col-12 col-sm-6 col-lg-4 product-item" data-category="colecionaveis">
+                        <div class="product-card">
+                            <a href="produto.html?produto=pelucia" class="product-img-link" aria-label="Ver Pelúcia Exclusiva">
+                                <div class="product-img-wrapper">
+                                    <img src="Imagens/pelucia.jpeg" alt="Pelúcia exclusiva colecionável" class="product-img" />
+                                    <div class="product-overlay"><span>Ver detalhes</span></div>
+                                </div>
+                            </a>
+                            <div class="product-body">
+                                <span class="product-tag">Colecionáveis</span>
+                                <h3 class="product-name"><a href="produto.html?produto=pelucia">Pelúcia Exclusiva</a></h3>
+                                <p class="product-desc">30 cm · Material antialérgico</p>
+                                <div class="product-footer">
+                                    <span class="product-price">R$ 79,90</span>
+                                    <a href="produto.html?produto=pelucia" class="btn btn-gold-sm">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Poster -->
+                    <article class="col-12 col-sm-6 col-lg-4 product-item" data-category="acessorios">
+                        <div class="product-card">
+                            <a href="produto.html?produto=poster" class="product-img-link" aria-label="Ver Poster Artístico">
+                                <div class="product-img-wrapper">
+                                    <img src="Imagens/poster.jpeg" alt="Poster artístico em papel premium" class="product-img" />
+                                    <div class="product-overlay"><span>Ver detalhes</span></div>
+                                </div>
+                            </a>
+                            <div class="product-body">
+                                <span class="product-tag">Acessórios</span>
+                                <h3 class="product-name"><a href="produto.html?produto=poster">Poster Artístico</a></h3>
+                                <p class="product-desc">Papel premium · 30×42 cm · Sem moldura</p>
+                                <div class="product-footer">
+                                    <span class="product-price">R$ 29,90</span>
+                                    <a href="produto.html?produto=poster" class="btn btn-gold-sm">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Ursinho -->
+                    <article class="col-12 col-sm-6 col-lg-4 product-item" data-category="colecionaveis">
+                        <div class="product-card">
+                            <a href="produto.html?produto=ursinho" class="product-img-link" aria-label="Ver Ursinho de Pelúcia">
+                                <div class="product-img-wrapper">
+                                    <img src="Imagens/urso.jpeg" alt="Ursinho de pelúcia clássico 25cm" class="product-img" />
+                                    <div class="product-overlay"><span>Ver detalhes</span></div>
+                                </div>
+                            </a>
+                            <div class="product-body">
+                                <span class="product-tag">Colecionáveis</span>
+                                <h3 class="product-name"><a href="produto.html?produto=ursinho">Ursinho de Pelúcia</a></h3>
+                                <p class="product-desc">25 cm · Pelúcia macia · Ideal para presentes</p>
+                                <div class="product-footer">
+                                    <span class="product-price">R$ 49,90</span>
+                                    <a href="produto.html?produto=ursinho" class="btn btn-gold-sm">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+                <!-- fim grid -->
+
+            </div>
+        </section>
+        <!-- fim catálogo -->
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="row g-4 py-5">
+                <div class="col-md-4">
+                    <p class="footer-brand">✦ Danilo's Wear</p>
+                    <p class="footer-desc">Souvenirs exclusivos para momentos inesquecíveis. Feitos com qualidade e carinho.</p>
+                </div>
+                <div class="col-md-4">
+                    <p class="footer-heading">Navegação</p>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Catálogo</a></li>
+                        <li><a href="produto.html">Produto</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <p class="footer-heading">Atendimento</p>
+                    <ul class="footer-links">
+                        <li>contato@daniloswear.com</li>
+                        <li>(41) 9 9999-0000</li>
+                        <li>Seg–Sex, 9h às 18h</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Danilo's Wear. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JS/mains.js"></script>
+</body>
+</html>
